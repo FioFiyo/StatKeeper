@@ -1,2 +1,2 @@
-web: cd ./client && PORT=3001 npm start
-api: bundle exec rails s
+web: cd ./client && webpack-dev-server --host 0.0.0.0 --port 3001
+api: bundle exec rails s -p 3000
