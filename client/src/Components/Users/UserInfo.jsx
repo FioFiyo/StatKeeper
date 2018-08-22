@@ -12,7 +12,7 @@ class UserInfo extends Component {
   }
   
   componentDidMount(){
-    ax.get(`/users/41`).then(res => {
+    ax.get(`/users/${this.props.match.params.id}`).then(res => {
       const user = res.data
       this.setState({user})
     })

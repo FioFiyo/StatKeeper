@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserInfo from './Components/Users/UserInfo.jsx';
+import App from './Components/App.jsx';
 
 ReactDOM.render(
-  <UserInfo />,
+  <App />,
   document.getElementById('root')
 )
