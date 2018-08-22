@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './Components/Hello/Hello.jsx';
-
+import UserInfo from './Components/Users/UserInfo.jsx';
 
 ReactDOM.render(
-  <Hello />,
+  <UserInfo />,
   document.getElementById('root')
 )

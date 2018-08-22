@@ -6,6 +6,10 @@ const htmlPlugin = new htmlWebpackPlugin({
 })
 
 module.exports = {
+  entry: "./src/index.js",
+  output: {
+    filename: "./dist/main.js"
+  },
   module: {
     rules: [
       {
