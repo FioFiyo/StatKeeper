@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
-import UserInfo from './Users/UserInfo.jsx';
-import Home from './Homepage/Home.jsx';
+import Routes from './routes.jsx';
 import {
   BrowserRouter as Router,
-  Route,
   Link,
   Switch,
   Redirect
 } from 'react-router-dom';
 
 class App extends Component {
+
+  componentDidUpdate(){
+    window.onpopstate = (e) => {
+      this.props.history.goBack();
+    }
+  }
+
   render(){
     return (
       <Router>
@@ -19,9 +24,8 @@ class App extends Component {
             <ul>
               <li><Link to="/users/45">User Info</Link></li>
             </ul>
-            <Route path="/users/:id" component={UserInfo} />
-            <Route exact path="/" component={Home} />
           </div>
+          <Routes />
         </div>
       </Router>
     )
