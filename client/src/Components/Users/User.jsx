@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import UserInfo from './UserInfo.jsx';
 import ax from '../../api.js';
+import UserInfo from './UserInfo.jsx';
 
 class User extends Component {
   constructor(props){
@@ -19,7 +19,9 @@ class User extends Component {
 
   render(){
     return(
-      <UserInfo user={this.state.user} />
+      <div>
+        <UserInfo user={this.state.user} />
+      </div>
     )
   }
 }

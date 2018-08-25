@@ -9,14 +9,13 @@ class UserInfo extends Component {
   }
 
   render(){
-    console.log(this.context.history)
+    const user = this.props.user
+    const details = Object.keys(user).map( (k, i) => {
+      return <UserDetail label={k} value={user[k]} key={`${user["id"]}-${k}`} />
+    })
     return(
       <ul>
-        {
-          Object.keys(this.props.user).map( (k, i) => {
-            return <UserDetail label={k} value={this.props.user[k]} key={`${this.props.user["id"]}-${k}`} />
-          })
-        }
+        {details}
       </ul>
     )
   }

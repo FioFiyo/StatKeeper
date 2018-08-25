@@ -23,6 +23,7 @@ class App extends Component {
             <h1><Link to="/">Go to Root</Link></h1>
             <ul>
               <li><Link to="/users/45">User Info</Link></li>
+              <li><Link to="/leagues">Leagues</Link></li>
             </ul>
           </div>
           <Routes />
